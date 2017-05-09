@@ -46,7 +46,7 @@ script: phpunit --configuration phpunit_$DB.xml --coverage-text
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
-#  irc: "irc.freenode.org#yourfavouriteroomfortravis"
+##  irc: "irc.freenode.org#yourfavouriteroomfortravis"
 
 
 
