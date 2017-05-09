@@ -47,3 +47,40 @@ script: phpunit --configuration phpunit_$DB.xml --coverage-text
 # configure notifications (email, IRC, campfire etc)
 notifications:
 #  irc: "irc.freenode.org#yourfavouriteroomfortravis"
+
+
+
+#Projects Using Gradle #
+#If your project has build.gradle file in the repository root, Travis CI builds your project with Gradle:
+
+
+#Projects Using Maven #
+#If your project has pom.xml file in the repository root but no build.gradle, Travis CI builds your project with Maven 3:
+
+
+# Projects Using Ant #
+# Default script Command #
+# If Travis CI does not detect Maven or Gradle files it runs Ant:
+# ant test
+
+
+#Because there is no single standard way of 
+#installing project dependencies with Ant, you need to specify the exact command to
+# run using install: key in your .travis.yml, for example:
+# language: java
+# install: ant deps
+
+
+# Caching #
+
+#A peculiarity of dependency caching in Gradle means that to
+# avoid uploading the cache after every build you need to add the following lines to your 
+
+# before_cache:
+#   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+#   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+# cache:
+#   directories:
+#     - $HOME/.gradle/caches/
+#     - $HOME/.gradle/wrapper/
+
